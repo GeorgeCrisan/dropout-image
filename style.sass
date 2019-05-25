@@ -1,0 +1,31 @@
+
+.main 
+    margin: auto
+    display: block
+    width: 300px
+    position: relative
+    top: 100px
+
+.dropout 
+    position: relative
+    & > .closing 
+        display: block
+        animation: close 1s forwards
+
+    & > img 
+        position: absolute
+        width: 10em
+
+    & > img:nth-child(odd)
+        transform: rotate(5deg)
+
+    & > img:nth-child(even)
+        transform: rotate(-5deg)
+
+@keyframes close 
+    0% 
+        top: 0
+    99%
+        top: 50vh
+    100%
+        visibility: hidden
